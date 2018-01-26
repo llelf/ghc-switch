@@ -469,7 +469,7 @@ if [ ! -d "$HOME/.ghc-switch/ghc-$GHCVER" ]; then
   if [ ! -d "ghc-$GHCVER" ]; then
     echo -en "\033[30Dghc-$GHCVER: unpacking  \033[1D"
     trap "rm -rf ghc-$GHCVER" EXIT
-    tar xf "$GHCTARBALL" >"$HOME/.ghc-switch/log" 2>&1
+    tar xvf "$GHCTARBALL" >"$HOME/.ghc-switch/log" 2>&1
     trap - EXIT
   fi
 
